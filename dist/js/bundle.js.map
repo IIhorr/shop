@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://shop/./src/js/main.js"],"names":[],"mappings":";;;;;AAAA;AACA;AACA,CAAC","file":"bundle.js","sourcesContent":["window.addEventListener('DOMContentLoaded', () => {\r\n  'use strict';\r\n});\r\n"],"sourceRoot":""}

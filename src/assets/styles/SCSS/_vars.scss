@@ -1,0 +1,18 @@
+:root {
+  // colors
+  --color-black: #000;
+  --color-white: #fff;
+  --color-eastbay: #484283;
+  --color-accent: #f14f4f;
+
+  //  отступы
+  --grid-gap: 20px;
+  --main-offset: 40px;
+
+  // fonts
+  --font-family: 'Intro', sans-serif;
+  --font-Book: 'Intro Book', sans-serif;
+
+  --middle-high-font: 700 30px / 140% var(--font-family);
+  --small-font: 400 14px / 140% var(--font-Book);
+}
