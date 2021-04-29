@@ -20,7 +20,7 @@
 .btn {
   padding: 22px 47px;
   border-radius: 4px;
-  font: var(--middle-font);
+  font: var(--middle-regular);
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
   &--primary {
@@ -29,6 +29,35 @@
 
     &:hover {
       background-color: var(--color-accent-hover);
+    }
+  }
+}
+
+.title {
+  margin-bottom: var(--main-offset);
+  font: var(--middle-high-bold);
+  color: var(--color-main);
+}
+
+.custom-checkbox {
+  font: var(--middle-book);
+  color: var(--color-main);
+  padding-left: 35px;
+  &__content {
+    &::before {
+      top: -3px;
+      border-color: var(--color-cameo);
+      border-radius: 4px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      background-image: url('../../img/catalog/check.svg');
+      background-size: 15px 12px;
     }
   }
 }
