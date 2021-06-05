@@ -1,0 +1,18 @@
+.sizes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sizes-table caption {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sizes-table td {
+  border: 1px solid var(--color-cameo);
+  font: var(--middle-book);
+  text-align: center;
+  color: var(--color-main);
+}
+/*# sourceMappingURL=size-tables.css.map */

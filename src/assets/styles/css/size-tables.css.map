@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,IAAI;EACX,eAAe,EAAE,QAAQ;CAe1B;;AAjBD,AAIE,YAJU,CAIV,OAAO,CAAC;EACN,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,cAAc,EAAE,IAAI;CACrB;;AARH,AAUE,YAVU,CAUV,EAAE,CAAC;EACD,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,kBAAkB;EAEpC,IAAI,EAAE,kBAAkB;EACxB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,iBAAiB;CACzB",
+    "sources": [
+        "../SCSS/components/size-tables.scss"
+    ],
+    "names": [],
+    "file": "size-tables.css"
+}
