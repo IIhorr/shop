@@ -1,3 +1,5 @@
+@import './mixin/breakpoint';
+
 :root {
   // colors
   --color-black: #000;
@@ -12,6 +14,7 @@
   --color-cameo: #dbbba9;
   --color-gray: #b2b5bb;
   --color-jumbo: #808080;
+  --color-btn-active: #8c2828;
 
   //  отступы
   --grid-gap: 20px;
@@ -21,13 +24,23 @@
   --big-offset: 60px;
 
   // fonts
-  --font-family: 'Intro', sans-serif;
-  --font-Book: 'Intro Book', sans-serif;
+  --font-bold: 'Montserrat-Bold', sans-serif;
+  --font-light: 'Montserrat-Light', sans-serif;
 
-  --middle-high-bold: 700 30px / 140% var(--font-family);
-  --prehigh-regular: 600 20px / 140% var(--font-family);
-  --prehigh-book: 400 24px / 140% var(--font-family);
-  --middle-book: 400 16px / 140% var(--font-Book);
-  --middle-regular: 600 16px / 140% var(--font-family);
-  --small-book: 400 14px / 140% var(--font-Book);
+  --middle-high-bold: 700 30px / 140% var(--font-bold);
+  --prehigh-regular: 600 20px / 140% var(--font-light);
+  --prehigh-book: 400 24px / 140% var(--font-bold);
+  --middle-book: 400 16px / 140% var(--font-bold);
+  --middle-regular: 600 16px / 140% var(--font-light);
+  --small-book: 400 14px / 140% var(--font-light);
+}
+
+@include mobile {
+  :root {
+    --grid-gap: 10px;
+    --main-offset: 20px;
+    --second-offset: 14px;
+    --small-offset: 8px;
+    --big-offset: 30px;
+  }
 }

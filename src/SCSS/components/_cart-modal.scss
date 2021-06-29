@@ -1,3 +1,5 @@
+@import '../mixin/breakpoint';
+
 .cart-modal {
   width: 580px;
   border-radius: 4px;
@@ -5,6 +7,11 @@
 
   .modal__close {
     display: none;
+
+    @include small-tablet {
+      z-index: 100;
+      display: block;
+    }
   }
 
   &__top {
@@ -12,6 +19,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: var(--main-offset);
+
+    @include small-tablet {
+      display: block;
+    }
   }
 
   &__title {
@@ -37,6 +48,11 @@
       margin-bottom: var(--small-offset);
     }
   }
+
+  @include small-tablet {
+    width: 100%;
+    max-width: 570px;
+  }
 }
 
 .cart-modal-order {
@@ -47,6 +63,13 @@
     border: 1px solid #d9d9d9;
   }
 
+  &__list {
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
   &__top {
     display: flex;
     flex-direction: column;
@@ -58,6 +81,10 @@
       font-weight: 700;
       color: var(--color-main);
     }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__quantity {
@@ -68,7 +95,7 @@
     margin-bottom: var(--second-offset);
   }
 
-  &__item {
+  .mini-cart__item {
     &:not(:last-child) {
       margin-bottom: 14px;
     }
@@ -87,6 +114,13 @@
       fill: currentColor;
       height: 7px;
       object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &--active {
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
 }

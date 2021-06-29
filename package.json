@@ -1,7 +1,6 @@
 {
-  "name": "settings-gulpppp",
+  "name": "test",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,5 +33,14 @@
     "webpack": "^5.38.1",
     "webpack-stream": "^6.1.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IIhorr/Sellmor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IIhorr/Sellmor/issues"
+  },
+  "homepage": "https://github.com/IIhorr/Sellmor#readme",
+  "description": ""
 }

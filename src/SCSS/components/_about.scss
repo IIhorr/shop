@@ -1,3 +1,5 @@
+@import '../mixin/breakpoint';
+
 .about {
   position: relative;
   overflow: hidden;
@@ -14,6 +16,11 @@
   &__text {
     width: 34%;
     transform: translateY(50px);
+
+    @include small-tablet {
+      transform: none;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -54,6 +61,10 @@
       background-color: var(--color-white);
       margin-right: var(--second-offset);
     }
+
+    @include small-tablet {
+      transform: none;
+    }
   }
 
   &__image {
@@ -65,6 +76,14 @@
       object-fit: cover;
       clip-path: polygon(24.5% 0, 100% 0, 75.7% 100%, 0 100%);
     }
+
+    @include tablet {
+      right: -100px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__figure {
@@ -72,5 +91,10 @@
     top: 0;
     left: 0;
     z-index: 0;
+  }
+
+  @include small-tablet {
+    padding: 50px 0;
+    height: auto;
   }
 }

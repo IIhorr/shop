@@ -1,11 +1,8 @@
-@import './vendor/fonts';
-@import './vendor/null-style';
-@import './vendor/nouislider.min';
-@import './vendor/graph-modal.min';
-@import './vendor/_swiper.min';
-@import './vendor/simplebar.min';
+@import './vendors';
+@import './mixin';
 @import './vars';
 @import './settings';
+@import './fonts';
 
 // components
 

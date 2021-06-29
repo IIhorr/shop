@@ -1,3 +1,13 @@
+@import '../mixin/breakpoint';
+
+.modal {
+  @include tablet {
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .prod-modal {
   padding: var(--main-offset);
   border-radius: 4px;
@@ -5,12 +15,21 @@
 
   .modal__close {
     display: none;
+
+    @include tablet {
+      display: block;
+      z-index: 100;
+    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--main-offset);
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__video {
@@ -25,6 +44,11 @@
       object-fit: cover;
       border: none;
     }
+  }
+
+  @include tablet {
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -44,6 +68,11 @@
       height: 460px;
     }
   }
+  @include small-tablet {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .modal-info {
@@ -60,10 +89,23 @@
     line-height: 16px;
     color: var(--color-gray);
     margin-bottom: var(--main-offset);
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__vendor {
     margin-right: var(--main-offset);
+
+    @include tablet {
+      margin-right: 10px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__quantity {
@@ -124,6 +166,15 @@
   &__order {
     margin-top: auto;
     width: 100%;
+
+    @include small-tablet {
+      margin-top: 30px;
+    }
+  }
+
+  @include small-tablet {
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -169,8 +220,10 @@
       object-fit: cover;
     }
 
-    &:hover {
-      opacity: 0.7;
+    @include desktop {
+      &:hover {
+        opacity: 0.7;
+      }
     }
     &--acitve {
       opacity: 0.7;
@@ -207,6 +260,14 @@
     &:first-child {
       margin-right: var(--second-offset);
     }
+
+    @include small-tablet {
+      width: 100%;
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__title {
@@ -219,5 +280,9 @@
     max-width: 450px;
     font: var(--middle-book);
     color: var(--color-main);
+  }
+
+  @include small-tablet {
+    display: block;
   }
 }

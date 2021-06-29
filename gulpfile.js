@@ -57,7 +57,7 @@ const fontsStyle = (done) => {
 };
 
 const svgSprites = () => {
-  return src('./src/img/**.svg')
+  return src('./src/img/**/*.svg')
     .pipe(
       svgSprite({
         mode: {
@@ -147,7 +147,12 @@ const htmlInclude = () => {
 };
 
 const imgToApp = () => {
-  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg']).pipe(dest('./app/img'));
+  return src([
+    './src/img/**/*.jpg',
+    './src/img/**/*.png',
+    './src/img/**/*.jpeg',
+    './src/img/**/*.webp',
+  ]).pipe(dest('./app/img'));
 };
 
 const resources = () => {

@@ -1,3 +1,4 @@
+@import '../mixin/breakpoint';
 .instagram {
   padding: var(--big-offset);
 
@@ -5,6 +6,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include small-tablet {
+      justify-content: center;
+    }
   }
 
   &__left {
@@ -13,6 +18,10 @@
     margin-right: var(--small-offset);
     border-radius: 4px;
     background-color: var(--color-eastbay);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__right {
@@ -21,6 +30,10 @@
     align-items: center;
     flex-direction: column;
     width: calc(100% - 380px - var(--small-offset));
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__title {
@@ -38,6 +51,7 @@
 
   &__input {
     margin-bottom: var(--small-offset);
+    order: 2;
   }
 
   &__btn {
@@ -80,6 +94,10 @@
     &:nth-child(2) {
       grid-row: 2;
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 

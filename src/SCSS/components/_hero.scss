@@ -1,3 +1,5 @@
+@import '../mixin/breakpoint';
+
 .hero {
   position: relative;
   padding: 100px 0;
@@ -22,21 +24,29 @@
     z-index: 0;
     margin-top: 20px;
     margin-left: 50px;
-    font-family: var(--font-family);
+    font-family: var(--font-light);
     font-weight: 700;
     font-size: 200px;
     line-height: 200px;
 
     color: rgba(255, 255, 255, 0.12);
     transform: translate(-50%, -50%);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__title {
     margin-top: 50px;
     max-width: 50%;
     margin-bottom: var(--second-offset);
-    font: 700 36px / 140% var(--font-family);
+    font: 700 36px / 140% var(--font-light);
     color: var(--color-white);
+
+    @include small-tablet {
+      max-width: none;
+    }
   }
 
   &__descr {
@@ -45,5 +55,14 @@
     max-width: calc(50% - 100px);
     font: var(--middle-book);
     color: var(--color-white);
+
+    @include small-tablet {
+      max-width: none;
+    }
+  }
+
+  @include small-tablet {
+    padding: 50px 0;
+    height: auto;
   }
 }

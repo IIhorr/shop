@@ -1,11 +1,18 @@
+@import '../mixin/breakpoint';
+
 .quiz {
   padding: var(--big-offfset) 0;
   margin-bottom: var(--big-offset);
+  font-family: var(--font-light);
 
   &__content {
     background-color: var(--color-bg);
     border-radius: 4px;
     padding: var(--main-offset) 100px;
+
+    @include small-tablet {
+      padding: var(--main-offset);
+    }
   }
 
   &__title {
@@ -21,7 +28,7 @@
   }
 }
 
-.quiz-question {
+.quiz-questions {
   padding: var(--second-offset) 0;
 }
 
@@ -33,17 +40,53 @@
     color: var(--color-main);
   }
 
+  &__label {
+    display: inline-block;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__message {
+    width: 465px;
+    height: 246px;
+    border: none;
+    padding: var(--second-offset);
+    background-color: var(--color-white);
+    color: var(--color-cameo);
+    resize: none;
+    border-radius: 4px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
   &__answers {
     padding-bottom: var(--main-offset);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 155px;
     gap: var(--second-offset) 70px;
+
+    @include small-tablet {
+      gap: var(--second-offset);
+    }
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
     img {
       margin-bottom: var(--small-offset);
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -53,7 +96,7 @@
   }
 }
 
-.quiz__bottom {
+.quiz-bottom {
   padding-top: var(--second-offset);
   display: flex;
   align-items: center;
@@ -61,6 +104,68 @@
   border-top: 1px solid var(--color-jumbo);
 }
 
-.asd {
+.last-question {
+  padding-top: var(--second-offset);
   display: none;
+
+  &__form {
+    position: relative;
+    max-width: 655px;
+    background: var(--color-cameo);
+    padding: var(--main-offset);
+    border-radius: 4px;
+  }
+
+  &__decorate {
+    position: absolute;
+    top: -5px;
+    right: -185px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: var(--small-offset);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 140%;
+    color: var(--color-white);
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: var(--second-offset);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--color-white);
+  }
+
+  &__input {
+    max-width: 500px;
+    margin-bottom: var(--small-offset);
+
+    &:nth-of-type(2) {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+
+  &__btn {
+    min-width: 220px;
+
+    @include mobile {
+      width: 100%;
+      min-width: auto;
+    }
+  }
 }
